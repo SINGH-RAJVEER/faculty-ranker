@@ -11,15 +11,16 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    // <AuthContextProvider>
     <html lang="en">
-      <body>
+      <body className="min-h-screen flex flex-col">
         <AuthContextProvider>
           <Navbar />
-          {children}
+          <main className="flex-1">
+            {children}
+          </main>
         </AuthContextProvider>
         <Analytics />
-        <footer className="bg-gray-800 py-6">
+        <footer className="bg-gray-800 py-6 mt-8">
           <div className="container mx-auto text-center text-white">
             <div className="mb-4 flex justify-center">
               <a
@@ -45,6 +46,5 @@ export default function RootLayout({
         </footer>
       </body>
     </html>
-    // </AuthContextProvider>
   );
 }

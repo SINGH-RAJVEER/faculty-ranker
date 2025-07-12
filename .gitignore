@@ -39,3 +39,6 @@ serviceAccountKey.json
 
 # ignoring the tmp data 
 scrapper/data/
+
+# bun
+bun.lock
